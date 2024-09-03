@@ -2,7 +2,7 @@
    functionality from the Employee base class? Illustrate this with an example showing how 
    the Manager and Developer classes override methods and add new attributes.'''
 
-# Base class
+#---------------------------------------Base class------------------------------------------#
 class Employee:
     def __init__(self, name, id_number):
         self.name = name
@@ -14,7 +14,7 @@ class Employee:
     def calculate_salary(self):
         raise NotImplementedError("Subclasses should implement this method.")
 
-# Managers
+#------------------------------------- Managers Class---------------------------------------#
 class Manager(Employee):
     def __init__(self, name, id_number, department):
         super().__init__(name, id_number)
@@ -27,7 +27,7 @@ class Manager(Employee):
         base_salary = 80000
         return base_salary
 
-# Developers
+#------------------------------------ Developers Class--------------------------------------#
 class Developer(Employee):
     def __init__(self, name, id_number, programming_language):
         super().__init__(name, id_number)
